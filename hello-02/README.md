@@ -5,7 +5,7 @@ Hello02.java
 
 javac Hello02.java
 
-java Hello02
+java -cp . Hello02
 
 JUnit的用法
 ===========
