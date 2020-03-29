@@ -4,6 +4,7 @@ Hello02.java
 用文件、包等分离
 
 javac Hello02.java
+javac Utils.java
 
 java -cp . Hello02
 
