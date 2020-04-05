@@ -1,11 +1,12 @@
 下载gradle 5.2.1
 
-cd hello-09
+> cd hello-09
 
 初始化项目
 ==========
-gradle init --type java-application
+> gradle init --type java-application
 
+```
 Select build script DSL:
   1: groovy
   2: kotlin
@@ -22,13 +23,15 @@ Source package (default: Hello09):
 
 BUILD SUCCESSFUL in 22s
 2 actionable tasks: 2 executed
+```
 
 构建命令
 ========
-gradle build
+> gradle build
 
 修改App.java
 ============
+```java
 package Hello09;
 import com.mine.hello.*;
 
@@ -37,9 +40,11 @@ public class App {
         System.out.println(Utils.add(2, 3));
     }
 }
+```
 
 修改AppTest.java
 ================
+```java
 package Hello09;
 
 import org.junit.Test;
@@ -51,22 +56,25 @@ public class AppTest {
       assertEquals(5, Utils.add(2, 3));
     }
 }
+```
 
 运行
 ====
 
-gradle run
-
+> gradle run
+```
 > Task :run
 5
 
 BUILD SUCCESSFUL in 0s
 2 actionable tasks: 1 executed, 1 up-to-date
+```
 
 打包设置
 ========
 build.gradle
 
+```groovy
 jar {
     manifest {
         attributes('Implementation-Title': project.name,
@@ -78,12 +86,14 @@ jar {
 // Define the main class for the application
 mainClassName = 'Hello09.App'
 version = '0.1.0'
+```
 
 参看之前的manifest.txt中内容
-'Main-Class': 'Hello09.App'
 
-gradle jar
+> 'Main-Class': 'Hello09.App'
+
+> gradle jar
 
 运行
 ====
-java -jar build/libs/Hello09-0.1.0.jar
+> java -jar build/libs/Hello09-0.1.0.jar

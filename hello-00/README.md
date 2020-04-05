@@ -3,17 +3,19 @@ hello-00
 Hello.java
 用方法分离
 
-javac Hello.java
-java -cp . Hello
+> javac Hello.java
 
-$ javap Hello.class
+> java -cp . Hello
+
+> $ javap Hello.class
+```
 Compiled from "Hello.java"
 public class Hello {
   public Hello();
   public static void main(java.lang.String[]);
   public static int add(int, int);
 }
-
+```
 默认的构造方法：Hello()
 
 另说
